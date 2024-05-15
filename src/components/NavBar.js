@@ -12,7 +12,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            <span>CodeBucks</span>
+            <span>MSU</span>
             {/* <i className="fas fa-code"></i> */}
             <span className="icon">
               <CodeIcon />
@@ -34,34 +34,47 @@ function NavBar() {
             <li className="nav-item">
               <NavLink
                 exact
-                to="/about"
+                to="/addclub"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
               >
-                About
+                Add Club
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink
                 exact
-                to="/blog"
+                to="/post"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
               >
-                Blog
+                Post
               </NavLink>
             </li>
+
             <li className="nav-item">
               <NavLink
                 exact
-                to="/contact"
+                to="/registers"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
               >
-                Contact Us
+                Registers
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/clubleads"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Club leads
               </NavLink>
             </li>
           </ul>
@@ -70,11 +83,11 @@ function NavBar() {
 
             {click ? (
               <span className="icon">
-                <HamburgetMenuOpen />{" "}
+                <HamburgetMenuClose />{" "}
               </span>
             ) : (
               <span className="icon">
-                <HamburgetMenuClose />
+                <HamburgetMenuOpen />
               </span>
             )}
           </div>
